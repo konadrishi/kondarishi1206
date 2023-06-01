@@ -1,0 +1,8 @@
+decalre a  var name envinorment =
+change ammount
+if dev env=add 10%
+test = 20%
+stage=30%
+prod 5%
+
+display==sneding amount
