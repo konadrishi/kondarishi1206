@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>add</title>
+</head>
+
+<body>
+    <h1>Reg Form</h1>
+    <form>
+        <table border="1" style="border-collapse:collapse" cellpadding="30">
+            <tr>
+                <th>First Name</th>
+                <td colspan="10"><input type="text" id="FirstName" placeholder="enter the First Name">
+
+                </td>
+
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td colspan="10"><input type="text" id="LastName" placeholder="enter the Last Name"></td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td colspan="10"><input type="email" id="Email" placeholder="abc@gmail.com"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td colspan="10">Male<input type="radio" name="gender" id="male">
+                    Female<input type="radio" name="gender" id="female"></td>
+
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td colspan="10"><input type="number" id="PhoneNumber" placeholder="(000)-000-0000"></td>
+            </tr>
+            <tr>
+                <th>Date of Birth</th>
+                <td colspan="10"><input type="date" id="DOB" placeholder="enter the number"></td>
+            </tr>
+            <tr>
+                <th>Degree</th>
+                <td colspan="10"><select type="option" id="opt">
+                        <option>Bachelors</option>
+                        <option>Masters</option>
+                        <option>No Degree</option>
+                        <option>Others</option>
+                    </select>
+            </tr>
+
+    </form>
+    </table>
+
+    <input type="button" value="submit" onclick="reg()">
+
+
+
+    <p id="demo"></p>
+
+    <script>
+
+
+        function reg() {
+            var a = (document.getElementById("FirstName").value);
+            console.log("firstName value", a);
+            var b = (document.getElementById("LastName").value);
+            console.log("LastName value", b);
+            var c = (document.getElementById("Email").value);
+            console.log("Email", c);
+            var selectedOption = document.querySelector('input[name="gender"]');
+            console.log("Gender", selectedOption.id);
+            var e = (document.getElementById("PhoneNumber").value);
+            console.log("PhoneNumber", e);
+            var f = (document.getElementById("DOB").value);
+            console.log("DateofBirth", f);
+            var g = (document.getElementById("opt").value);
+            console.log("opt", g);
+
+            document.getElementById("demo").innerHTML =  "Result is: <br>" +"FirstName " +a + "<br>" +"LastName: "+ b + "<br>"+"Email: " + c + "<br>"+ "Gender"+  selectedOption.id + "<br>" +"PhoneNumber: "+ e + "<br>" +"Date of Birth: "+ f + "<br>" +"Degree"+ g;
+        }
+    </script>
+</body>
+
+</html>
