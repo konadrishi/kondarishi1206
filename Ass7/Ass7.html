@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>add</title>
+</head>
+
+<body>
+
+    <script>
+        
+        Array.prototype.custSort = function () {
+               this.sort(function (a, b) {
+                return a - b;
+            });
+            return this[1];
+        };
+
+        let numbers = [14, 74, 7, 46, 13, 2,1,96];
+        console.log("Second Smallest value :"+numbers.custSort());
+
+
+        
+
+    </script>
+</body>
+
+</html>
